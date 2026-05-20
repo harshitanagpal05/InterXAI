@@ -16,7 +16,7 @@ class DsaTopicCreate(BaseModel):
 
 
 class CustomInterviewBase(BaseModel):
-    """Neutral base schema with shared interview fields — no create-time validation."""
+    """Neutral base schema with shared interview fields ΓÇö no create-time validation."""
 
     description: str
     position: str
@@ -32,7 +32,7 @@ class CustomInterviewBase(BaseModel):
 
 
 class CustomInterviewCreate(CustomInterviewBase):
-    """Schema used when *creating* an interview — enforces future-date constraints."""
+    """Schema used when *creating* an interview ΓÇö enforces future-date constraints."""
 
     questions: list[CustomQuestionCreate] = []
     dsa_topics: list[DsaTopicCreate] = []
@@ -78,7 +78,7 @@ class DsaTopicResponse(DsaTopicCreate):
 
 
 class CustomInterviewResponse(CustomInterviewBase):
-    """Schema used when *reading* an interview — no future-date validation."""
+    """Schema used when *reading* an interview ΓÇö no future-date validation."""
 
     id: int
     org_id: int

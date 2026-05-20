@@ -14,7 +14,7 @@ class NoopWorker(BackgroundWorkerInterface):
         logger.info("NoopWorker shut down")
 
     async def process_resume_task(
-        self, file_bytes_b64: str, file_name: str, application_id: int
+        self, _file_bytes_b64: str, file_name: str, application_id: int
     ) -> None:
         logger.warning(
             "NoopWorker: process_resume_task called but ignored "
